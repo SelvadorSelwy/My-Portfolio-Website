@@ -1,0 +1,227 @@
+:root{
+    --body: #545d6d;
+    --my-color:  #5eab9f;
+    --color2: #5eab9fad;
+    --color3: #5eab9f21;
+    --dark: #202631;
+    --border-color: rgba(0,0,0,0.10);
+    --border-width: 1px;
+    --border-radius: 20px;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /* --bs-font-roboto: "Roboto-BlackItalic" */
+    scroll-behavior: smooth;
+}
+body{
+    margin:0;
+    font-family: sans-serif;
+    line-height: 1.8;
+    color: var(--body);
+    background: #c0c0d726;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 800;
+    color: var(--color2)
+}
+a{
+    text-decoration: none;
+    font-weight: 800;
+    transition: all 0.4s ease;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+a:hover{
+    color: var(--my-color);
+}
+.navbar{
+    position: fixed;
+    top:0;
+    left: 0;
+    width:100%;
+    /* justify-content: space-between; */
+    padding-top: 0; 
+    padding-bottom: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    background: var(--color3);
+}
+.navbar .navbar-brand{
+    font: var(--bs-font-sans-serif);
+    font-size: 28px;
+    color: var(--body);
+    font-weight:800;
+    /* font-family: "Roboto-thin"; */
+}
+.navbar .navbar-nav .nav-link{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark);
+}
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active
+{
+    color: var(--my-color);
+}
+
+.social-link{
+    align-items: center;
+}
+.navbar .navbar-toggler svg{
+    color: var(--my-color);
+}
+.social-icon{
+    color: var(---body);
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    font-size: 18px;
+}
+
+section{
+    min-height: 100vh;
+    Padding-top: 5rem;
+    width: 100%;
+    background: #282a2c;
+}
+#home{
+    padding-top: 170px;
+    padding-bottom: 70px;
+    min-height:100vh;
+    /* background-color: var(--dark) ; */
+    /* background: url(../imgs/selwy2.jpg); */
+    background: url(../imgs/selwy.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(1px);
+}
+#home h2{
+    color: var(--my-color);
+}
+.title{
+    position: relative;
+    flex-direction: column;
+}
+.title::after{
+    content: "";
+    position: absolute;
+    bottom:10px;
+    left: 50%;
+    height:2px;
+    width: 150px;
+    background: var(--my-color);
+    transform: translateX(-50%);
+}
+.do{
+    border:1px solid #5eaba021;
+    border-radius: 10px;
+    background: rgba(94, 171, 159, 0.129);
+    transition: 0.5s;
+}
+.do:hover{
+    box-shadow: 0 0 20px 0px rgba(94,171,150,0.28);
+}
+.do svg{
+    color:var(--my-color);
+}
+
+.box{
+    overflow: hidden;
+}
+.box::before{
+    content: attr(data-work);
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background: var(--color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    top:0;
+    left: 0;
+    transition:0.5s;
+}
+.box:hover::before{
+    transform: translateX(-100%);
+}
+.Preview-btn{
+    content: "";
+    bottom:-10px;
+    right: 20px;
+    color: var(--color2);
+}
+.Preview-btn:hover{
+    background:var(--color2) ;
+    color: white;
+}
+.photo{
+    width: 100%;
+    height: 70vh;
+    text-align: center;
+    border-radius: 50%;
+}
+.photo img{
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 0;
+    filter: blur(1);
+}
+
+.design{
+    text-align:center;
+}
+
+.design svg{
+    color: #fff;
+    animation: beat;
+    animation-duration: 0.9s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    /* transition: 0.3s; */
+}
+@keyframes beat{
+  100%{
+    color: #26a0cf;
+  }
+}
+
+footer::before{
+    content: "";
+    position: absolute;
+    top:0px;
+    left:0;
+    width: 100%;
+    height: 5px;
+    background: var(--my-color)
+}
+.contact div:hover{
+    color: var(--my-color);
+}
+.contact svg{
+    margin-right: 10px;
+}
+.right-side .social-link .social-icon:hover{
+    background:var(--my-color);
+    color: var(--white);
+}
+
+@media (max-width: 992px){
+    .navbar{
+        background-color: #5eab9f21;
+        padding: 0;
+    }
+    /* .navbar .navbar-brand{
+        color: var(--white);
+    } */
+    .nav-link{
+        color: var(--body)!important;
+    }
+    .nav-link:hover{
+        color: var(--my-color)!important;
+    }
+}
+
