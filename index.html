@@ -25,15 +25,13 @@
             aria-expanded="false" 
             aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars"></i>
+                <!-- <span class="navbar-toggler-icon"></span> -->
             </button>
             <div  class="navbar-collapse collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a href="#" class="nav-link p-2 p-lg-3 active" aria-current="page">Home</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a href="#" class="nav-link p-2 p-lg-3">Services</a>
-                    </li> -->
                     <li class="nav-item">
                         <a href="#skills" class="nav-link p-2 p-lg-3">My Skills</a>
                     </li>
@@ -128,28 +126,28 @@
                         <img  class="img-fluid" src="imgs/blog.png" alt="">
                     </div> 
                     <p class="text-light mb-4">Build a Blog website</p>
-                    <a href="https://github.com/SelvadorSelwy/Python-flask-Blog" class="btn Preview-btn rounded-pill my-1 px-3 position-absolute">Preview</a>
+                    <a href="#https://github.com/SelvadorSelwy/Python-flask-Blog" class="btn Preview-btn rounded-pill my-1 px-3 position-absolute">Preview</a>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3 position-relative mb-4">
                     <div class="box mb-3 bg-white position-relative" data-work="E. commerce">
                         <img class="img-fluid" src="imgs/beauty-cover.png" alt="">
                     </div> 
                     <p class="text-light mb-4">Build e.commerce website</p>
-                    <a href="https://github.com/SelvadorSelwy/beauty-shop" class="btn Preview-btn rounded-pill my-1 px-3 position-absolute">Preview</a>
+                    <a href="#https://github.com/SelvadorSelwy/beauty-shop" class="btn Preview-btn rounded-pill my-1 px-3 position-absolute">Preview</a>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3 position-relative mb-4">
                     <div class="box mb-3 bg-white position-relative" data-work="Portfolio">
                         <img class="img-fluid" src="imgs/portfolio1.png" alt="">
                     </div> 
                     <p class="text-light mb-4">Build a portfolio website</p>
-                    <a href="https://github.com/SelvadorSelwy/Portfolio-Website" class="btn Preview-btn rounded-pill my-1 px-3 position-absolute">Preview</a>
+                    <a href="#https://github.com/SelvadorSelwy/portfolio-webstite" class="btn Preview-btn rounded-pill my-1 px-3 position-absolute">Preview</a>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3 position-relative mb-4">
                     <div class="box mb-3 bg-white position-relative" data-work="Quiz-App">
                         <img class="img-fluid" src="imgs/quiz-app.png" alt="">
                     </div> 
                     <p class="text-light mb-4">Build Quiz-up </p>
-                    <a href="https://github.com/SelvadorSelwy/quiz-up" class="btn Preview-btn rounded-pill my-1 px-3 position-absolute">Preview</a>
+                    <a href="#https://github.com/SelvadorSelwy/quiz-up" class="btn Preview-btn rounded-pill my-1 px-3 position-absolute">Preview</a>
                 </div>
             </div>
         </container>
@@ -168,7 +166,7 @@
                 <div class="col-md-12 col-lg-5">
                     <div class="info position-relative">
                         <h6>Never Give up</h6>
-                        <P class="text-white-50">
+                        <P class="text-white-50 text-justify">
                             Hi, my name is Abdulbaset and I am here today to introduce myself to you my friend
                             Thank you for giving me the opportunity to do that.
                             I am a fast learner ; I possess excellent problem-solving capabilities, and I can manage a significant work load.
@@ -224,6 +222,17 @@
 
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="js/all.min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+    <script>
+        const lists = document.querySelectorAll(".nav-link");
+        addEventListener("click", (e) => {
+            if (e.target.classList.contains("nav-link")) {
+                lists.forEach((el) => {
+                el.classList.remove("active");
+                });
+                e.target.classList.add("active");
+            }
+        });
+    </script>
 </body>
 </html>
